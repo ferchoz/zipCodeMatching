@@ -13,10 +13,10 @@
 
                         @foreach ($agents as $agent)
                             <div class="form-group">
-                                <label for="{{ str_slug($agent->name, "-") }}" class="col-sm-3 control-label">{{ $agent->name }}:</label>
+                                <label for="{{ $agent->id }}" class="col-sm-3 control-label">{{ $agent->name }}:</label>
                                 <div class="col-sm-6">
-                                    <input type="text" name="{{ str_slug($agent->name, "-") }}" id="{{ str_slug($agent->name, "-") }}" class="form-control"
-                                           placeholder="US zip code" data-minlength="5" maxlength="5" required>
+                                    <input type="text" name="{{ $agent->id }}" id="{{ $agent->id }}" class="form-control"
+                                           placeholder="US zip code" data-minlength="5" maxlength="5" value="{{ old($agent->id) }}" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
