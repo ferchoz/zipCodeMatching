@@ -1,27 +1,50 @@
-# Laravel PHP Framework
+# Zip Code Matching
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+In order to run this aplication correctly follow the steps:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+1) clone the repository:
+```sh
+git clone https://github.com/ferchoz/zipCodeMatching.git
+```
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+2) run composer:
+> if you do not have composer installed run:
+> ```sh
+> sudo apt-get install -y curl
+> curl -sS https://getcomposer.org/installer | php
+> sudo mv composer.phar /usr/local/bin/composer
+> ```
 
-## Official Documentation
+enter in the folder of the project:
+```sh
+cd zipCodeMatching
+```
+and run composer
+```sh
+composer install
+```
+after that, copy the sample enviroment file
+```sh
+cp .env.example .env
+```
+now generate a new key with:
+```sh
+php artisan key:generate
+```
+modified the database config in:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+config/database.php line 59
 
-## Contributing
+now run the migration:
+```sh
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+now run:
+```sh
+php artisan serve
+```
 
-## Security Vulnerabilities
+and you can surf the site in [http://localhost:8000/](http://localhost:8000/)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Enjoy!!!
