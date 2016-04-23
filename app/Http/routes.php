@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('zipMatching');
 });
+
+Route::post('/match', 'MatchZipController@matchZipCodes');
