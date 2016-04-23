@@ -10,8 +10,15 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use \Illuminate\Support\Facades\Validator;
 
+/**
+ * Class MatchZipController
+ * @package App\Http\Controllers
+ */
 class MatchZipController extends BaseController
 {
+    /**
+     * show the index form.
+     */
     public function index()
     {
         $agents = Agent::all();
@@ -46,6 +53,12 @@ class MatchZipController extends BaseController
         return view('showMatches', ['items' => $items]);
     }
 
+    /**
+     * parses the information to show all the data in the view.
+     * @param $agents array
+     * @param $matches array
+     * @return array
+     */
     private function getListOfCustomers($agents, $matches)
     {
         $list = array();

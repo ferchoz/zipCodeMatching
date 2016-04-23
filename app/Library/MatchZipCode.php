@@ -11,6 +11,7 @@ use App\ZipCodes;
 class MatchZipCode
 {
     /**
+     * here is where the magic happens (return the matches)
      * @param $agents array
      * @param $customers array
      * @return array
@@ -24,6 +25,12 @@ class MatchZipCode
         return self::findBest($distances);
     }
 
+    /**
+     * calculate the distance between agents and customers
+     * @param $agents array
+     * @param $customers array
+     * @return array
+     */
     static private function calculate($agents, $customers)
     {
         $distances = array();
@@ -40,6 +47,11 @@ class MatchZipCode
         return $distances;
     }
 
+    /**
+     * find the nearby agent for each customer zip code
+     * @param $distances array
+     * @return array
+     */
     static private function findBest($distances)
     {
         $matches = array();
@@ -53,6 +65,7 @@ class MatchZipCode
     }
 
     /**
+     * calculate the distance between zip codes
      * @param $from ZipCodes
      * @param $to ZipCodes
      * @return float
