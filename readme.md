@@ -32,8 +32,9 @@ now generate a new key with:
 php artisan key:generate
 ```
 modified the database config in:
-
-config/database.php line 59
+```sh
+vim .env
+```
 
 now run the migration:
 ```sh
