@@ -49,3 +49,9 @@ php artisan serve
 and you can surf the site in [http://localhost:8000/](http://localhost:8000/)
 
 Enjoy!!!
+
+##Extra:
+in the table "agents" you can add any numbers of agents!
+
+it will work! :rocket:
+ 
