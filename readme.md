@@ -31,7 +31,7 @@ now generate a new key with:
 ```sh
 php artisan key:generate
 ```
-modified the database config in:
+modify the database config in:
 ```sh
 vim .env
 ```
